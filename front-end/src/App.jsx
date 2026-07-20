@@ -1,30 +1,19 @@
 import "./App.css";
-import { enviarMensagem } from "../api/api";
-import { useState } from "react";
+import {Routes, Route} from 'react-router'
+import HomePage from "./pages/HomePage";
+import AnalisePage from "./pages/AnalisePage";
+import ResultsPage from "./pages/ResultsPage";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  function saveMessage(event) {
-    setMessage(event.target.value);
-  }
-
-  async function handleEnviar() {
-    const data = await enviarMensagem(message);
-
-    console.log(data);
-  }
+  
 
   return (
     <>
-      <input
-        type="text"
-        onChange={saveMessage}
-      />
-
-      <button onClick={handleEnviar}>
-        Enviar
-      </button>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/analise" element={<AnalisePage />}/>
+        <Route path="/results" element={<ResultsPage />}/>
+      </Routes>
     </>
   );
 }

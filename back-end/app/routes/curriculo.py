@@ -11,6 +11,8 @@ def receber_curriculo(dados: dict = Body(...)):
             detail="Campo obrigatorio"
         )
 
+    print("CURRICULO RECEBIDO")
+
     return {
         "mensagem": dados["mensagem"]
     }
