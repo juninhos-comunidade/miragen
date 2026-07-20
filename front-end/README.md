@@ -1,16 +1,17 @@
-# React + Vite
+As branches a serem utilizadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+main: Não dar commit direto na main, só merge
 
-Currently, two official plugins are available:
+feat/router: Alterações nas rotas (backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+feat/home-page: Alterações na HomePage.jsx
+feat/analise-page: Alterações na AnalisePage.jsx
+feat/results-page: Alterações na ResultsPage.jsx
 
-## React Compiler
+feat/ui-components: Alterações em componentes como Button, Input, Upload
+feat/layout: Alterações no Header.jsx, Footer.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+feat/analise-sections: 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+feat/curriculo-api: Alterações na api.js (frontend) ou main.py (backend)
+feat/ia-analysis: Ainda não existe
