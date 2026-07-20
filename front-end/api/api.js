@@ -7,7 +7,7 @@ export async function enviarCurriculo(file, jobDescription) {
   formData.append("file", file);
   formData.append("job_description", jobDescription);
 
-  const response = await fetch(`${API_URL}/curriculo/envio-curriculo`, {
+  const response = await fetch(`${API_URL}/curriculo/envio`, {
     method: "POST",
     body: formData,
   });

@@ -1,21 +1,22 @@
-import { enviarCurriculo } from "../../api/api";
+import { enviarCurriculo } from "../../../api/api";
 import { useState } from "react";
-import Upload from "../components/Upload";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import Input from "../components/Input"
+import Upload from "../../components/Upload/Upload";
+import Button from "../../components/Button/Button";
+import Header from "../../components/Header/Header";
+import Input from "../../components/Inputs/Input"
+import './AnalisePage.css'
 
-function AnalisePage(){
+function AnalisePage() {
     const [resumeFile, setResumeFile] = useState(null);
     const [jobDescription, setJobDescription] = useState("");
 
-    function handleFileChange(event){
+    function handleFileChange(event) {
         const file = event.target.files[0]
         if (!file) return
         setResumeFile(file);
     }
 
-    function handleJobDescChange(event){
+    function handleJobDescChange(event) {
         const job = event.target.value
         if (!job) return
         setJobDescription(job)
@@ -29,8 +30,10 @@ function AnalisePage(){
     return (
         <>
             <Header />
-            <Upload onChange={handleFileChange} />
-            <Input onChange={handleJobDescChange} />
+            <div className="envio-container">
+                <Upload onChange={handleFileChange} />
+                <Input onChange={handleJobDescChange} />
+            </div>
             <Button variant="upload" text="Upload" onClick={handleEnviar} />
         </>
     )

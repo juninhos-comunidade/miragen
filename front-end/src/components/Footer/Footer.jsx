@@ -1,7 +1,7 @@
-function Button() {
+function Footer() {
     return (
         <h1>Página Inicial</h1>
     )
 }
 
-export default Button
+export default Footer

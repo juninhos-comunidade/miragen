@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button from "../Button/Button"
 import { Link } from 'react-router'
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
                         </Link>
                     </li>
                 </ul>
-                
+
             </nav>
         </header>
     )

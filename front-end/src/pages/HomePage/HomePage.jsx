@@ -1,4 +1,4 @@
-import Header from "../components/Header"
+import Header from "../../components/Header/Header"
 
 function HomePage() {
     return (
@@ -6,7 +6,7 @@ function HomePage() {
             <Header />
             <h1>Página Inicial</h1>
         </>
-        
+
     )
 }
 

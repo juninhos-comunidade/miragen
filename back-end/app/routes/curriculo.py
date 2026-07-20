@@ -4,7 +4,7 @@ from fastapi import APIRouter, Body, HTTPException, UploadFile, File, Form
 router = APIRouter()
 
 
-@router.post("/envio-curriculo")
+@router.post("/envio")
 def receber_curriculo(file: UploadFile = File(...), job_description: str = Form(...)):
     if not file or not job_description:
         raise HTTPException(

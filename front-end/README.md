@@ -11,7 +11,5 @@ feat/results-page: Alterações na ResultsPage.jsx
 feat/ui-components: Alterações em componentes como Button, Input, Upload
 feat/layout: Alterações no Header.jsx, Footer.jsx
 
-feat/analise-sections: 
-
 feat/curriculo-api: Alterações na api.js (frontend) ou main.py (backend)
 feat/ia-analysis: Ainda não existe
