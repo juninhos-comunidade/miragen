@@ -1,10 +1,10 @@
 import { enviarCurriculo } from "../../../api/api";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Upload from "../../components/Upload/Upload";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
-import Input from "../../components/Inputs/Input"
-import './AnalisePage.css'
+import TextArea from "../../components/TextArea/TextArea";
+import './AnalisePage.css';
 
 function AnalisePage() {
     const [resumeFile, setResumeFile] = useState(null);
@@ -23,12 +23,23 @@ function AnalisePage() {
     }
 
     async function handleEnviar() {
-        console.log(resumeFile, jobDescription)
+        if (!resumeFile || !jobDescription) return;
         const data = await enviarCurriculo(resumeFile, jobDescription);
         console.log(data);
     }
+
+    const inputRef = useRef(null);
+    function abrirSeletor() {
+        inputRef.current?.click();
+    }
+
+    const formatFileSize = (bytes) => {
+        if (!bytes) return '';
+        return (bytes / 1024).toFixed(0) + ' KB';
+    };
+
     return (
-        <>
+        <div className="analysis-page">
             <Header />
             <div className="envio-container">
                 <Upload onChange={handleFileChange} />
@@ -40,4 +51,4 @@ function AnalisePage() {
 
 }
 
-export default AnalisePage
+export default AnalisePage;
