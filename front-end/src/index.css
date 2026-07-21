@@ -4,21 +4,11 @@
   --primary-hover: #5B21B6;
   --secondary: #8B5CF6;
   --secondary-hover: #56379c;
+  --primary-text: #FDFDFDff;
+  --primary-dark: #091128ff;
+  --secondary-dark: #252C47ff;
+  --secondary-dark-hover: #333952;
 
-  /* Texto */
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-
-
-  --background: #f7f8fc;
-  --surface: #ffffff;
-  --surface-hover: #f8f8fb;
-
-  --border: #e5e7eb;
-  --border-light: #d1d5db;
-
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --radius: 16px;
 }
 
 * {
