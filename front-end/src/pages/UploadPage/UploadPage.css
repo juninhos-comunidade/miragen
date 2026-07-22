@@ -170,7 +170,6 @@
   background-color: var(--primary-hover);
 }
 
-/* Arquivo Selecionado */
 .selected-file-card {
   display: flex;
   align-items: center;
@@ -221,9 +220,8 @@
   justify-content: center;
 }
 
-/* Banner Informativo */
 .info-banner {
-  margin-top: auto; /* Empurra o banner para o final do card */
+  margin-top: auto; 
   padding-top: 16px;
   background-color: #F5F3FF;
   border-radius: 10px;
@@ -247,7 +245,6 @@
   line-height: 1.4;
 }
 
-/* Área de Texto */
 .textarea-wrapper {
   position: relative;
   display: flex;
@@ -282,7 +279,6 @@
   margin-top: 8px;
 }
 
-/* Rodapé / Stepper e Botão */
 .bottom-bar {
   display: flex;
   justify-content: space-between;
@@ -331,8 +327,8 @@
   width: 40px;
   height: 2px;
   background-color: #E5E7EB;
-}
 
+}
 .bottom-actions {
   display: flex;
   gap: 12px;
@@ -357,7 +353,6 @@
   transform: translateY(-1px);
 }
 
-/* Responsividade para Telas Menores */
 @media (max-width: 768px) {
   .analysis-grid {
     grid-template-columns: 1fr;
