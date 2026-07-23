@@ -29,14 +29,14 @@ function AnalisePage() {
 
             setEtapa("Preparando resultados...");
 
-            navigate("/resultado", {
+            navigate("/results", {
                 state: resultado,
             });
         }
 
         analisar();
     }, [resumeFile, jobDescription, navigate]);
-    
+
     return (
         <div>
             {etapa}
