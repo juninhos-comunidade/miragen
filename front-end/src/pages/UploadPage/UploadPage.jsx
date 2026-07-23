@@ -1,14 +1,13 @@
-import { enviarCurriculo } from "../../../api/api";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router";
 import Upload from "../../components/Upload/Upload";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import TextArea from "../../components/TextArea/TextArea";
-import './AnalisePage.css';
+import './UploadPage.css';
 
 
-
-function AnalisePage() {
+function UploadPage() {
     const [resumeFile, setResumeFile] = useState(null);
     const [jobDescription, setJobDescription] = useState("");
 
@@ -23,10 +22,15 @@ function AnalisePage() {
         setJobDescription(job);
     }
 
+    const navigate = useNavigate()
     async function handleEnviar() {
         if (!resumeFile || !jobDescription) return;
-        const data = await enviarCurriculo(resumeFile, jobDescription);
-        console.log(data);
+        navigate("/analise", {
+        state: {
+            resumeFile,
+            jobDescription,
+        },
+    });
     }
 
     const inputRef = useRef(null);
@@ -65,8 +69,6 @@ function AnalisePage() {
                                 <p className="section-desc">Envie seu currículo em PDF (máx. 10MB).</p>
                             </div>
                         </div>
-
-
 
                         <div className="resume-upload" onClick={abrirSeletor}>
                             <div className="upload-icon-circle">
@@ -158,7 +160,7 @@ function AnalisePage() {
 
                             variant="btn-upload"
 
-                            text="Analisar agora →"
+                            text="Analisar agora"
 
                             onClick={handleEnviar}
 
@@ -171,4 +173,4 @@ function AnalisePage() {
     );
 }
 
-export default AnalisePage
+export default UploadPage

@@ -11,7 +11,7 @@ function Header() {
                 <ul>
                     <li><Link to="/">Início</Link></li>
                     <li>
-                        <Link to="/analise">
+                        <Link to="/upload">
                             <Button variant="primary" text="Analisar Currículo" />
                         </Link>
                     </li>
