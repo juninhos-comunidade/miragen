@@ -1,25 +1,36 @@
-import Button from "../Button/Button"
-import { Link } from 'react-router'
+import Button from "../Button/Button";
+import { Link } from "react-router";
+import "./Header.css"; 
 
 function Header() {
-    return (
-        <header className="header-container">
-            <div className="header-logo">
-                <Link to="/">Miragen</Link>
-            </div>
-            <nav>
-                <ul>
-                    <li><Link to="/">Início</Link></li>
-                    <li>
-                        <Link to="/analise">
-                            <Button variant="primary" text="Analisar Currículo" />
-                        </Link>
-                    </li>
-                </ul>
+  return (
+    <header className="header-container">
+      <Link to="/" className="header-logo">
+        <div className="logo-icon">M</div>
+        <span>MIRAGEN</span>
+      </Link>
 
-            </nav>
-        </header>
-    )
+      <nav className="header-nav">
+        <ul>
+          <li>
+            <a href="#como-funciona">Como funciona</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre o projeto</a>
+          </li>
+          <li>
+            <a href="#recursos">Recursos</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="header-actions">
+        <Link to="/analise">
+          <Button variant="primary" text="Começar análise" />
+        </Link>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
