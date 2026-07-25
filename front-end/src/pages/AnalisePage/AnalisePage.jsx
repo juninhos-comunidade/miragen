@@ -1,43 +1,47 @@
-import { enviarCurriculo } from "../../../api/api";
-import { useState } from "react";
-import Upload from "../../components/Upload/Upload";
-import Button from "../../components/Button/Button";
-import Header from "../../components/Header/Header";
-import Input from "../../components/Inputs/Input"
-import './AnalisePage.css'
+import { useLocation, useNavigate } from "react-router"
+import {enviarCurriculo} from '../../../api/api.js' 
+import { useEffect, useState } from 'react'
 
 function AnalisePage() {
-    const [resumeFile, setResumeFile] = useState(null);
-    const [jobDescription, setJobDescription] = useState("");
+    const { state } = useLocation()
+    const [etapa, setEtapa] = useState("");
+    const {resumeFile, jobDescription } = state;
+    const navigate = useNavigate();
 
-    function handleFileChange(event) {
-        const file = event.target.files[0]
-        if (!file) return
-        setResumeFile(file);
+    function esperar(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
+    
+    useEffect(() => {
+        async function analisar() {
+            setEtapa("Enviando currículo...");
 
-    function handleJobDescChange(event) {
-        const job = event.target.value
-        if (!job) return
-        setJobDescription(job)
-    }
+            const resultado = await enviarCurriculo(
+                resumeFile,
+                jobDescription
+            );
 
-    async function handleEnviar() {
-        console.log(resumeFile, jobDescription)
-        const data = await enviarCurriculo(resumeFile, jobDescription);
-        console.log(data);
-    }
+            setEtapa("Extraindo texto...");
+            await esperar(1000);
+
+            setEtapa("Analisando compatibilidade...");
+            await esperar(1000);
+
+            setEtapa("Preparando resultados...");
+
+            navigate("/results", {
+                state: resultado,
+            });
+        }
+
+        analisar();
+    }, [resumeFile, jobDescription, navigate]);
+
     return (
-        <>
-            <Header />
-            <div className="envio-container">
-                <Upload onChange={handleFileChange} />
-                <Input onChange={handleJobDescChange} />
-            </div>
-            <Button variant="upload" text="Upload" onClick={handleEnviar} />
-        </>
-    )
-
+        <div>
+            {etapa}
+        </div>
+    );
 }
 
 export default AnalisePage

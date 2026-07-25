@@ -1,8 +1,8 @@
-function Input({ onChange }){
+function Input({ type, onChange }){
 
     return (
        <input
-            type="textarea"
+            type={type}
             onChange={onChange}
         /> 
     )

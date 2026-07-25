@@ -1,8 +1,14 @@
 :root {
+  /* Cores principais */
   --primary: #6D28D9;
   --primary-hover: #5B21B6;
   --secondary: #8B5CF6;
   --secondary-hover: #56379c;
+  --primary-text: #FDFDFDff;
+  --primary-dark: #091128ff;
+  --secondary-dark: #252C47ff;
+  --secondary-dark-hover: #333952;
+
 }
 
 * {
