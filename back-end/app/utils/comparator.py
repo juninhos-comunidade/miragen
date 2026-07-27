@@ -1,6 +1,10 @@
 # Da forma mais simples possível
 def comparar_vaga_curriculo(curriculo, vaga):
-    palavras_chave = list
+    palavras_ignoradas = [
+        "de", "da", "do", "das", "dos",
+        "e", "ou", "a", "o", "as", "os",
+        "em", "para", "com", "por"
+    ]
 
     palavras_vaga = vaga.lower().split()
     palavras_curriculo = curriculo.lower().split()
@@ -9,7 +13,7 @@ def comparar_vaga_curriculo(curriculo, vaga):
     total = 0
 
     for palavra in palavras_vaga:
-        if palavra in palavras_chave:
+        if palavra not in palavras_ignoradas:
             total += 1
             if palavra in palavras_curriculo:
                 score += 1
