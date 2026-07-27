@@ -1,0 +1,19 @@
+categoria,palavra
+linguagem,python
+linguagem,java
+linguagem,javascript
+linguagem,c#
+framework,react
+framework,angular
+framework,fastapi
+framework,django
+framework,spring
+banco,postgresql
+banco,mysql
+banco,mongodb
+cloud,aws
+cloud,azure
+cloud,gcp
+ferramenta,power bi
+ferramenta,docker
+ferramenta,kubernetes
