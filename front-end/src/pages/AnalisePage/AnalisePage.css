@@ -1,0 +1,33 @@
+.analysis-page {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analysis-card {
+    width: 500px;
+    background: white;
+    border-radius: 18px;
+    padding: 48px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.08);
+}
+
+.analysis-title {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.analysis-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 36px;
+}
+
+.analysis-step {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    align-items: center;
+    font-size: 16px;
+}

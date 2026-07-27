@@ -65,7 +65,7 @@
 .social-icons a {
   width: 42px;
   height: 42px;
-  background: --primary-dark;
+  background: var(--primary-dark);
   border-radius: 50%;
   display: flex;
   justify-content: center;
