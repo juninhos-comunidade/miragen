@@ -1,5 +1,4 @@
 import "./Footer.css"
-import "../../index.css"
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
@@ -9,10 +8,9 @@ function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-brand">
-                    {/* <img src="" alt="" className="logo/> */}
                     <div className="brand-logo">
-                        <SiGmail />
-                        <h4>MIRAGEN</h4>
+                        <div className="logo-icon">M</div>
+                        <span>MIRAGEN</span>
                     </div>
                     <p>Inteligência para impulsionar sua carreira</p>
 
