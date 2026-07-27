@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import Upload from "../../components/Upload/Upload";
 import Button from "../../components/Button/Button";
-import Header from "../../components/Header/Header";
 import TextArea from "../../components/TextArea/TextArea";
 import './UploadPage.css';
 
@@ -48,7 +47,6 @@ function UploadPage() {
 
     return (
         <div className="analysis-page">
-            <Header />
 
             <main className="analysis-container">
 

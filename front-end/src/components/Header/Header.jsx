@@ -25,7 +25,7 @@ function Header() {
       </nav>
 
       <div className="header-actions">
-        <Link to="/analise">
+        <Link to="/upload">
           <Button variant="primary" text="Começar análise" />
         </Link>
       </div>
